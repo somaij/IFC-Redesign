@@ -52,6 +52,7 @@ img {
 a {
     color: #444;
     text-decoration: none;
+    transition: 250ms all ease;
 }
 
 a:hover {
@@ -77,4 +78,28 @@ ol, ul {
 }
 select{
     width: 100%;
+}
+
+.text-center{
+    text-align:center;
+}
+.text-right{
+    text-align:right;
+    display:inline-block;
+    float:right;
+}
+.regular-text {
+	p {
+		margin: 1rem 0;
+		line-height: 2;
+	}
+
+	ul {
+		list-style: none;
+		margin-left: 2rem;
+	}
+
+	ol {
+		margin-left: 2rem;
+	}
 }

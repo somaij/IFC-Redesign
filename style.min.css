@@ -182,12 +182,17 @@ body{font:400 16px/1.8 sans-serif;margin:0;height:100%;min-height:100%}
 .clear:after{clear:both}
 .clear{*zoom:1}
 img{max-width:100%;vertical-align:bottom;height:auto}
-a{color:#444;text-decoration:none}
+a{color:#444;text-decoration:none;-webkit-transition:250ms all ease;transition:250ms all ease}
 a:hover{color:#444}
 a:focus{outline:0}
 a:hover,a:active{outline:0}
 input:focus{outline:0;border:0}
 select{width:100%}
+.text-center{text-align:center}
+.text-right{text-align:right;display:inline-block;float:right}
+.regular-text p{margin:1rem 0;line-height:2}
+.regular-text ul{list-style:none;margin-left:2rem}
+.regular-text ol{margin-left:2rem}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
