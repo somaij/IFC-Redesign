@@ -17,15 +17,15 @@ $specific_row = $rows[$i]; // 0 will get the first row, remember that the count 
 $period_start = $specific_row['start_date']; // get the sub field value
 $period_start = DateTime::createFromFormat('Y-m-d', $period_start);
 $period_start = $period_start->format('F j');
-echo "<ul class='pt'>";
-echo "<li><small>Started - " . $period_start . "</small></li>";
-echo "<li>Fajr - " . $specific_row['fajr'] . "</li>";
-echo "<li>Shurūq - " . $specific_row['shuruq'] . "</li>";
-echo "<li>Żuhr - " . $specific_row['zuhr'] . "</li>";
-echo "<li>Asr - " . $specific_row['asr'] . "</li>";
-echo "<li>Maghrib - " . $specific_row['mag'] . "</li>";
-echo "<li>Īshā - " . $specific_row['isha'] . "</li>";
-echo "</ul>";
+echo "<small class='start-time'>Started - " . $period_start . "</small>";
+echo "<dl class='pt'>";
+echo "<dt>Fajr</dt><dd>" . $specific_row['fajr'] . "</dd>";
+echo "<dt>Shurūq</dt><dd>" . $specific_row['shuruq'] . "</dd>";
+echo "<dt>Żuhr</dt><dd>" . $specific_row['zuhr'] . "</dd>";
+echo "<dt>Asr</dt><dd>" . $specific_row['asr'] . "</dd>";
+echo "<dt>Maghrib</dt><dd>" . $specific_row['mag'] . "</dd>";
+echo "<dt>Īshā</dt><dd>" . $specific_row['isha'] . "</dd>";
+echo "</dl>";
 else :
 
 endif;

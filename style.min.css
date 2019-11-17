@@ -177,7 +177,7 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box;-ms-overflow-style:scro
 .align-self-stretch{-ms-flex-item-align:stretch !important;align-self:stretch !important}
 *,*:after,*:before{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility}
 html{font-size:16px;height:100%;min-height:100%}
-body{font:400 16px/1.8 sans-serif;margin:0;height:100%;min-height:100%}
+body{font:400 16px/1.8 'Muli',sans-serif;margin:0;height:100%;min-height:100%}
 .clear:before,.clear:after{content:' ';display:table}
 .clear:after{clear:both}
 .clear{*zoom:1}
@@ -190,9 +190,27 @@ input:focus{outline:0;border:0}
 select{width:100%}
 .text-center{text-align:center}
 .text-right{text-align:right;display:inline-block;float:right}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400 !important}
+h1{font-size:3.5rem;line-height:1.2}
+.sub small{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:3px}
+.sub.brown small{color:#e0be8e}
+.sub h1{margin-top:0}
 .regular-text p{margin:1rem 0;line-height:2}
 .regular-text ul{list-style:none;margin-left:2rem}
 .regular-text ol{margin-left:2rem}
+.btn-sq,.btn-ar,.btn-sq-outline{text-transform:uppercase;font-weight:bold;letter-spacing:4px;font-size:14px;padding:.75rem 2rem}
+.btn-sq{background-color:#c3aa87;color:#FFF}
+.btn-sq-outline.white{border:1px solid #FFF;color:#FFF}
+.btn-ar.white-brown{color:#FFF}
+header{position:absolute;width:100%;padding:1rem 0;z-index:2}
+header #desktop-nav a{color:#FFF;text-transform:uppercase;font-weight:bold;letter-spacing:2px;font-size:12px}
+header #desktop-nav .sub-menu{position:absolute;background-color:#123c69;text-align:left;padding:.5rem;z-index:6;visibility:hidden;opacity:0;-webkit-transition:250ms all ease;transition:250ms all ease;display:none}
+header #desktop-nav .sub-menu li{display:block;font-size:13px;margin:0;padding:.4rem}
+header #desktop-nav ul{display:-webkit-box;display:-ms-flexbox;display:flex}
+header #desktop-nav ul li{padding:.5rem 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+header #desktop-nav ul li.donate{padding:.5rem 2rem;border:1px solid #FFF}
+header #desktop-nav ul li.menu-item-has-children:hover .sub-menu{top:40px;visibility:visible;display:block;opacity:1}
+#mobile-nav{display:none}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
 .alignright{float:right;margin:5px 0 20px 20px}
@@ -210,6 +228,27 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 .textwidget img{margin:1rem 0}
 .bypostauthor{background:inherit}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
+#masthead{color:#FFF;height:800px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-size:cover;position:relative}
+#masthead h1{color:#FFF;margin-bottom:0}
+#masthead .content{display:-webkit-box;display:-ms-flexbox;display:flex;height:350px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+#masthead .masthead-prayer-times{position:absolute;background-color:#123c69;width:250px;padding:2rem;right:4rem;bottom:-2rem;border-top:4px solid #c3aa87;color:#FFF}
+#masthead .masthead-prayer-times h3{font-size:1.5rem}
+#masthead .masthead-prayer-times h3,#masthead .masthead-prayer-times small{text-align:center}
+#masthead .masthead-prayer-times dl{width:100%;overflow:hidden;padding:0;margin:0}
+#masthead .masthead-prayer-times dt{float:left;width:50%;padding:0;margin:0;font-family:'Playfair Display',serif}
+#masthead .masthead-prayer-times dd{float:left;width:50%;padding:0;margin:0;text-align:right}
+#madrasah-preview{margin:5rem 0}
+#madrasah-preview .row{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#madrasah-preview .image{width:50%;height:600px}
+#madrasah-preview .image img{-o-object-fit:cover;object-fit:cover;width:100%;height:100%}
+#madrasah-preview .text{margin-left:-4rem;background-color:#FFF;height:500px;width:50%;padding:3rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+#madrasah-preview .text .divider{height:1px;width:60px;background-color:#ab9371;margin:2rem 0}
+#madrasah-preview .text .top,#madrasah-preview .text .bottom{max-width:350px}
+#madrasah-preview .text .bottom{font-size:14px}
+#madrasah-preview .text .bottom h4{color:#ab9371;text-transform:uppercase;font-size:14px;font-weight:bold;letter-spacing:2px}
+#madrasah-preview .text .bottom p{margin-bottom:2rem}
+.cta{color:#FFF;background-color:#ab9371;padding:2rem}
+.cta h3{font-size:1.8rem;color:#FFF;margin-right:3rem}
 @media screen{[hidden~="screen"]{display:inherit}
 [hidden~="screen"]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0) !important;position:absolute !important}
 }@media(min-width:240px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.4rem/1.8rem sans-serif}

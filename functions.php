@@ -36,6 +36,26 @@ function wpgt_scripts() {
 	}
 }
 // Hook.
+function register_menus() {
+	register_nav_menus(
+		array(
+		  'header-menu' => __( 'Header Menu' ),
+		  'mobile-menu' => __( 'Mobile Menu' ),
+		  'footer-menu-1' => __( 'Footer Menu 1' ),
+		  'footer-menu-2' => __( 'Footer Menu 2' ),
+		  'footer-menu-3' => __( 'Footer Menu 3' )
+		)
+	  );
+	}
+
+  add_action( 'init', 'register_menus' );
+  add_action( 'customize_register', 'ja_remove_customizer_options', 30 );
+  function tn_custom_excerpt_length( $length ) {
+   return 25;
+   }
+   add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
+   remove_filter ('acf_the_content', 'wpautop');
 add_action( 'wp_enqueue_scripts', 'wpgt_scripts' );
 
 if( function_exists('acf_add_options_page') ) {
