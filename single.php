@@ -14,7 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+get_template_part( 'template-parts/page-header');?>
 <section id="post">
 	<div class="container">
         <div class="row text-center">

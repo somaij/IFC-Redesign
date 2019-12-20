@@ -220,7 +220,7 @@ header #desktop-nav ul li{padding:.5rem 1rem;display:-webkit-box;display:-ms-fle
 header #desktop-nav ul li.donate{padding:.5rem 2rem;border:1px solid #FFF}
 header #desktop-nav ul li.menu-item-has-children:hover .sub-menu{top:40px;visibility:visible;display:block;opacity:1}
 #mobile-nav{display:none}
-.page-header{height:550px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;color:#FFF}
+.page-header{height:550px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;color:#FFF;background-size:cover}
 .page-header h1{color:#FFF}
 .alignnone{margin:5px 20px 20px 0}
 .aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}
