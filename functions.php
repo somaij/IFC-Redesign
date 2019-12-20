@@ -58,6 +58,8 @@ function register_menus() {
    remove_filter ('acf_the_content', 'wpautop');
 add_action( 'wp_enqueue_scripts', 'wpgt_scripts' );
 
+add_theme_support( 'post-thumbnails' ); 
+
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();

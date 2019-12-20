@@ -22,7 +22,7 @@ get_header(); ?>
         </div>
 		<div class="row justify-content-center">
 			<div class="col-10">
-				<?php the_excerpt();?>
+				<?php the_content();?>
 			</div>
 			
 		</div>

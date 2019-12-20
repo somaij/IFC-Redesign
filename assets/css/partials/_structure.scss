@@ -100,7 +100,14 @@ h1 {
 	font-size: 3.5rem;
 	line-height: 1.2;
 }
-
+h2{
+	font-size:2.5rem;
+	line-height: 1.2;
+}
+h3{
+	font-size:2rem;
+	line-height: 1.2;
+}
 .sub {
 	small {
 		font-size: 16px;
@@ -115,9 +122,16 @@ h1 {
 			color: $brown-text;
 		}
 	}
-
-	h1 {
+	&.blue {
+		small {
+			color: $blue;
+		}
+	}
+	h1,h2,h3 {
 		margin-top: 0;
+	}
+	h2{
+		font-size:2rem;
 	}
 }
 
@@ -145,30 +159,55 @@ h1 {
 	letter-spacing: 4px;
 	font-size: 14px;
 	padding: 0.75rem 2rem;
+	transition:250ms all ease;
 }
 
 .btn-sq {
 	background-color: $brown-light;
 	color: #FFF;
-}
-.btn-sq-outline{
-	&.white {
-		border:1px solid #FFF;
-	color: #FFF;
+	&:hover{
+		background-color:darken($brown-light, 20%);
 	}
-	
 }
+
+.btn-sq-outline {
+	&.white {
+		border: 1px solid #FFF;
+		color: #FFF;
+
+		&:hover {
+			background-color: #FFF;
+			color: $brown-text;
+		}
+	}
+	&.blue-brown{
+		border:1px solid $blue;
+		color:$brown-dark;
+		&:hover{
+			background-color:$brown-light;
+			border-color:$brown-light;
+			color:#FFF;
+		}
+	}
+}
+
 .btn-ar {
 	&.white-brown {
 		color: #FFF;
 	}
 }
-
+.divider{
+	height:1px;
+	width:60px;
+	background-color:$brown-dark;
+	margin:2rem 0;
+}
 header {
 	position: absolute;
 	width: 100%;
 	padding: 1rem 0;
 	z-index: 2;
+
 	#desktop-nav {
 		a {
 			color: #FFF;
@@ -177,16 +216,18 @@ header {
 			letter-spacing: 2px;
 			font-size: 12px;
 		}
-        .sub-menu {
+
+		.sub-menu {
 			position: absolute;
 			background-color: $blue;
 			text-align: left;
 			padding: 0.5rem;
 			z-index: 6;
 			visibility: hidden;
-            opacity:0;
-            transition: 250ms all ease;
-            display:none;
+			opacity: 0;
+			transition: 250ms all ease;
+			display: none;
+
 			li {
 				display: block;
 				font-size: 13px;
@@ -194,34 +235,49 @@ header {
 				padding: 0.4rem;
 			}
 		}
+
 		ul {
 			display: flex;
 
 			li {
-                padding:0.5rem 1rem;
-                display:flex;
-                align-items: center;
-                &.donate{
-                    padding:0.5rem 2rem;
-                    border:1px solid #FFF;
-                    
-                }
-                &.menu-item-has-children:hover{
-                    .sub-menu{
-                        top:40px;
-                        visibility: visible;
-                        display:block;
-                        opacity:1;
-                    }
-                }
+				padding: 0.5rem 1rem;
+				display: flex;
+				align-items: center;
+
+				&.donate {
+					padding: 0.5rem 2rem;
+					border: 1px solid #FFF;
+
+				}
+
+				&.menu-item-has-children:hover {
+					.sub-menu {
+						top: 40px;
+						visibility: visible;
+						display: block;
+						opacity: 1;
+					}
+				}
 
 			}
 		}
 
-		
+
 	}
 }
 
 #mobile-nav {
 	display: none;
+}
+
+.page-header{
+	height:550px;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	text-align: center;
+	color:#FFF;
+	h1{
+		color:#FFF;
+	}
 }
