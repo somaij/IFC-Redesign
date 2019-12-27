@@ -21,7 +21,7 @@ echo "<small class='start-time'>Started - " . $period_start . "</small>";
 echo "<dl class='pt'>";
 echo "<dt>Fajr</dt><dd>" . $specific_row['fajr'] . "</dd>";
 echo "<dt>Shurūq</dt><dd>" . $specific_row['shuruq'] . "</dd>";
-echo "<dt>Żuhr</dt><dd>" . $specific_row['zuhr'] . "</dd>";
+echo "<dt>Dhuhr</dt><dd>" . $specific_row['dhuhr'] . "</dd>";
 echo "<dt>Asr</dt><dd>" . $specific_row['asr'] . "</dd>";
 echo "<dt>Maghrib</dt><dd>" . $specific_row['mag'] . "</dd>";
 echo "<dt>Īshā</dt><dd>" . $specific_row['isha'] . "</dd>";
