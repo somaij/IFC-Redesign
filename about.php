@@ -7,7 +7,21 @@
 get_header();
 get_template_part( 'template-parts/page-header');
 ?>
-
+<section class="imam-section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<?php if ( get_field( 'imam_image') ) { ?>
+				<img src="<?php the_field( 'imam_image' ); ?>" />
+				<?php } ?>
+			</div>
+			<div class="col">
+				<h2><?php the_field( 'imam_section_title' ); ?></h2>
+				<div class="regular-text"><?php the_field( 'imam_section_content' ); ?></div>
+			</div>
+		</div>
+	</div>
+</section>
 <section class="about-container">
 	<div class="container">
 		<div class="row">
