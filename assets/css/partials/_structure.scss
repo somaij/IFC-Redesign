@@ -18,6 +18,7 @@ html {
 	font-size: 16px;
 	height: 100%;
 	min-height: 100%;
+	width:100%;
 }
 
 body {
@@ -25,6 +26,9 @@ body {
 	margin: 0;
 	height: 100%;
 	min-height: 100%;
+	@media screen and (max-width:575px){
+		overflow-x:hidden;
+	}
 }
 
 /* clear */
@@ -99,6 +103,9 @@ h3 {
 h1 {
 	font-size: 3.5rem;
 	line-height: 1.2;
+	@media screen and (max-width:575px){
+		font-size:2.5rem;
+	}
 }
 h2{
 	font-size:2.5rem;
@@ -160,13 +167,25 @@ h3{
 	font-size: 14px;
 	padding: 0.75rem 2rem;
 	transition:250ms all ease;
+	display:inline-block;
 }
 
 .btn-sq {
-	background-color: $brown-light;
 	color: #FFF;
 	&:hover{
-		background-color:darken($brown-light, 20%);
+		color:#CCC;
+	}
+	&.brown{
+		background-color: $brown-light;
+		&:hover{
+			background-color:darken($brown-light, 20%);
+		}
+	}
+	&.blue{
+		background-color: $blue;
+		&:hover{
+			background-color:darken($blue, 10%);
+		}
 	}
 }
 
@@ -174,10 +193,9 @@ h3{
 	&.white {
 		border: 1px solid #FFF;
 		color: #FFF;
-
 		&:hover {
 			background-color: #FFF;
-			color: $brown-text;
+			color: $brown-text !important;
 		}
 	}
 	&.blue-brown{
@@ -192,8 +210,24 @@ h3{
 }
 
 .btn-ar {
+	display:inline-flex;
+	align-items:center;
 	&.white-brown {
 		color: #FFF;
+	}
+	&:after{
+		content:"\2192";
+		font-size:1.5rem;
+		color:$brown-text;
+		transition:250ms all ease;
+		
+		margin-left:0.5rem;
+	}
+	&:hover{
+		color:$brown-text;
+		&:after{
+			transform:translateX(1rem);
+		}
 	}
 }
 .divider{
@@ -244,10 +278,9 @@ header {
 				display: flex;
 				align-items: center;
 
-				&.donate {
-					padding: 0.5rem 2rem;
-					border: 1px solid #FFF;
-
+				&.donate a{
+					padding:0.5rem 2rem;
+					@extend .btn-sq-outline.white;
 				}
 
 				&.menu-item-has-children:hover {
@@ -271,14 +304,18 @@ header {
 }
 
 .page-header{
-	height:550px;
+	height:450px;
 	display:flex;
 	align-items:center;
 	justify-content: center;
 	text-align: center;
 	color:#FFF;
 	background-size:cover;
+	background-color:darken($blue,15%);
 	h1{
 		color:#FFF;
 	}
+}
+#page{
+	margin-top:3rem;
 }

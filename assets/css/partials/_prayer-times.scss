@@ -1,0 +1,30 @@
+#full-list-prayers{
+	padding:5rem 0;
+	.headline{
+		margin-bottom:5rem;
+	}
+	.sidebar{
+
+		border-right:2px solid $brown-light;
+	}
+	.month-full-width{
+		height:375px;
+		padding:2rem;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		background-color:#FFF;
+		border:1px solid #F2F2F2;
+		box-shadow: 0 12px 33px rgba(0, 0, 0, .15) ;
+		margin-bottom:5rem;
+		.month-indicator{
+			width:20%;
+			display:flex;
+		align-items: center;
+		justify-content: center;
+		}
+		table{
+			width:80%;
+		}
+	}
+}

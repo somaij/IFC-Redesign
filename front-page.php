@@ -21,7 +21,7 @@ $rand = array_rand($images, 1);
 ?>
 
 <div id="masthead"
-	style="background-image:linear-gradient(to right, rgba(18, 60, 105, 0.70), rgba(0, 0, 0, 0.20)),url(<?php echo $images[$rand]['url']; ?>;">
+	style="background-image:linear-gradient(to right, rgba(18, 60, 105, 0.70), rgba(0, 0, 0, 0.20)),url(<?php echo $images[$rand]['url']; ?>);">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-8 content">
@@ -83,7 +83,7 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
 <?php endif; ?>
 <?php if ( have_rows( 'cta_1' ) ) : ?>
 <?php while ( have_rows( 'cta_1' ) ) : the_row(); ?>
-<section class="cta d-flex align-items-center justify-content-center">
+<section class="cta d-flex flex-column flex-md-row align-items-center justify-content-center">
 	<h3><?php the_sub_field( 'text' ); ?></h3>
 	<a href="<?php the_sub_field( 'button_link' ); ?>"
 		class="btn-sq-outline white"><?php the_sub_field( 'button_text' ); ?></a>
@@ -114,7 +114,7 @@ while ( $loop->have_posts() ) : $loop->the_post();?>
 					echo "</a>";
 				} wp_reset_query();?>
 		</div>
-		<div class="event-cta row justify-content-center">
+		<div class="event-cta row align-items-center justify-content-center">
 			<div>
 				<?php the_sub_field( 'cta_text' ); ?>
 			</div>

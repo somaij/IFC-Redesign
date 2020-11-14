@@ -27,8 +27,7 @@ get_template_part( 'template-parts/page-header');
 		<div class="row">
 			<div class="d-none d-md-block col-3">
 				<div class="about-side">
-					<div class="sidebar__inner">
-						<h3>Table of Contents</h3>
+					<div class="sidebar-inner">
 						<ul class="sidebar">
 							<?php
                             if( have_rows('content') ):

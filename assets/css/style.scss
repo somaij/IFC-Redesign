@@ -10,7 +10,6 @@ Text Domain: WPGT
 */
 
 // Mixins & Variables.
-@import 'partials/mixins';
 @import 'partials/variables';
 
 // Normalize & Santize.
@@ -27,3 +26,11 @@ Text Domain: WPGT
 
 // Base.
 @import 'partials/base';
+
+//By Template
+@import 'partials/home';
+@import 'partials/about';
+@import 'partials/prayer-times';
+@import 'partials/madrasah';
+@import 'partials/donate';
+@import 'partials/tariqa';
