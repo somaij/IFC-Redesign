@@ -8,10 +8,10 @@ get_header();
 ?>
 <?php if ( have_rows( 'masthead' ) ) : ?>
 <?php while ( have_rows( 'masthead' ) ) : the_row(); ?>
-<section id="donate-masthead" style="background-image:url(<?php the_sub_field( 'background_image' ); ?>);">
+<section id="donate-masthead" style="background-image:linear-gradient(to right, rgba(18, 60, 105, 0.70), rgba(0, 0, 0, 0.20)),url(<?php the_sub_field( 'background_image' ); ?>);">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 text-center">
 				<div class="sub"><?php the_sub_field( 'subtitle' ); ?></div>
 				<h1><?php the_sub_field( 'title' ); ?></h1>
 			</div>
