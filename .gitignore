@@ -66,3 +66,8 @@ assets/bower_components/*
 .idea/
 library/vendors/composer
 assets/img/.DS_Store
+
+# Main style files #
+style.css
+style.css.map
+style.min.css
