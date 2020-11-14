@@ -145,11 +145,11 @@ h3{
 .regular-text {
 	p {
 		margin: 1rem 0;
-		line-height: 2;
+		line-height: 1.6;
 	}
 
 	ul {
-		list-style: none;
+		
 		margin-left: 2rem;
 	}
 
@@ -266,6 +266,7 @@ nav {
 				font-size: 13px;
 				margin: 0;
 				padding: 0.4rem;
+				
 			}
 		}
 
@@ -276,7 +277,11 @@ nav {
 				padding: 0.5rem 1rem;
 				display: flex;
 				align-items: center;
-
+				&:hover{
+					> a{
+						color:#CCC;
+					}
+				}
 				&.donate a{
 					padding:0.5rem 2rem;
 					@extend .btn-sq-outline.white;

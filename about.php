@@ -44,7 +44,7 @@ get_template_part( 'template-parts/page-header');
 					</div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col offset-lg-1 about-content">
 
 				<?php
 if( have_rows('content') ):

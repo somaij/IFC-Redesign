@@ -8,4 +8,12 @@ jQuery(document).ready(function($) {
         maxWidth:700,
         maxHeight:1200
     });
+    $('#madrasah-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		autoplay: true,
+		pauseOnHover: true
+	});
 });

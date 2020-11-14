@@ -10,7 +10,7 @@ get_header();
 	<?php if ( have_rows( 'slides' ) ) : ?>
 	<?php while ( have_rows( 'slides' ) ) : the_row(); ?>
 	<div class="slide"
-		style="background-image:url(<?php if ( get_sub_field( 'image' ) ) : the_sub_field( 'image' ); endif;?>);">
+		style="background-image:linear-gradient(to right, rgba(18, 60, 105, 0.70), rgba(0, 0, 0, 0.20)),url(<?php if ( get_sub_field( 'image' ) ) : the_sub_field( 'image' ); endif;?>);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-7">
