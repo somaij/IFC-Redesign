@@ -40,7 +40,7 @@ function wpgt_scripts() {
 
 		wp_enqueue_script( 'wpgt_slickJs', get_template_directory_uri() . '/assets/vendor/slick/slick.min.js', array('jquery'), '1.0', true );
 
-		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/assets/js/jquery.sticky-sidebar.min.js', array(), '1', true );
+		wp_enqueue_script( 'sticky-sidebar', get_template_directory_uri() . '/assets/vendor/jquery.sticky-sidebar.min.js', array(), '1', true );
 
 		// Enqueue vendor JS after vendors to call those libraries.
 		wp_enqueue_script( 'wpgt_vendorsJs', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '1.0', true );

@@ -5,16 +5,13 @@
  *
  * @since 1.0.0
  */
-var sub = function sub(a, b) {
-  return a - b;
-};
-"use strict";
-
-/**
- * Custom JavaScript
- *
- * @since 1.0.0
- */
-var sum = function sum(a, b) {
-  return a + b;
-};
+jQuery(document).ready(function ($) {
+  $(".hamburger").click(function () {
+    $(this).toggleClass("is-active");
+    $("#mobile_menu, #mobile").toggleClass("open");
+  });
+  $("#mobile_menu a").click(function () {
+    $("#mobile_menu, #mobile").removeClass("open");
+    $(".hamburger").removeClass("is-active");
+  });
+});

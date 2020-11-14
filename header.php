@@ -24,31 +24,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 </head>
 
 <body <?php body_class(); ?>>
-<header>
+<nav id="desktop" class="d-none d-lg-block">
         <div class="container">
             <div class="row align-items-center">
 				<div class="site-branding col-2">
 				<a href="<?php echo get_home_url(); ?>" class="logo-wrapper">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" /></a>
 				</div>
-				<nav id="desktop-nav" class="main-navigation col-10 text-right d-none d-md-block">
+				<div id="desktop-nav" class="main-navigation col-10 text-right">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'header-menu',
 						'menu_id'        => 'header-menu',
 					) );
 					?>
-				</nav><!-- #site-navigation -->
-				<button class="menu-toggle d-block d-md-none text-right" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i> Menu</button>
-
+				</div><!-- #site-navigation -->
             </div>
         </div>
-	</header><!-- #masthead -->
-<nav id="mobile-nav">
-		<?php
-				wp_nav_menu( array(
-					'theme_location' => 'mobile-menu',
-					'menu_id'        => 'mobile-menu',
-				) );
-				?>
+	</nav><!-- #masthead -->
+	<nav id="mobile" class="d-flex d-lg-none justify-content-between align-items-center">
+		<a href="<?php echo get_home_url(); ?>" class="logo-wrapper">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" /></a>
+		<button class="hamburger hamburger--spring" type="button" aria-label="Menu" aria-controls="navigation">
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+		</button>
+		<div id="mobile_menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+		</div>
 	</nav>

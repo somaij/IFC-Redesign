@@ -3,4 +3,9 @@
  *
  * @since 1.0.0
  */
-const divide = (a, b) => a / b;
+jQuery(document).ready(function($) {
+    $('a[data-rel^=lightcase]').lightcase({
+        maxWidth:700,
+        maxHeight:1200
+    });
+});
