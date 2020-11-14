@@ -4,8 +4,11 @@
 		margin-bottom:5rem;
 	}
 	.sidebar{
-
+		position: sticky;
+		top:50px;
 		border-right:2px solid $brown-light;
+		display:flex;
+		flex-direction: column;
 	}
 	.month-full-width{
 		height:375px;
