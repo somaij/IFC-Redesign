@@ -89,8 +89,8 @@ get_header();
 	<?php while ( have_rows( 'gallery_section' ) ) : the_row(); ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-12 text-center">
-            <div class="sub"><?php the_sub_field( 'subtitle' ); ?></div>
+			<div class="col-12 text-center sub">
+            <small><?php the_sub_field( 'subtitle' ); ?></small>
             <h2><?php the_sub_field( 'title' ); ?></h2>
             </div>
         </div>
