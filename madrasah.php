@@ -14,7 +14,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-7">
-                    <div class="sub"><?php the_sub_field( 'subtitle' ); ?></div>
+					<div class="sub"><?php the_sub_field( 'subtitle' ); ?></div>
 					<h1><?php the_sub_field( 'title' ); ?></h1>
 					<p><?php the_sub_field( 'text' ); ?></p>
 				</div>
@@ -77,6 +77,7 @@ get_header();
 <?php while ( have_rows( 'middle_cta' ) ) : the_row(); ?>
 <section class="cta d-flex flex-column flex-md-row align-items-center justify-content-center">
 	<h3><?php the_sub_field( 'text' ); ?></h3>
+	<?php $link = get_sub_field( 'link' ); ?>
 	<?php if ( $link ) : ?>
 	<a href="<?php echo esc_url( $link) ; ?>" class="btn-sq-outline white"><?php the_sub_field( 'button_text' ); ?></a>
 	<?php endif; ?>
@@ -84,27 +85,38 @@ get_header();
 <?php endwhile; ?>
 <?php endif; ?>
 
-<section id="gallery">
+<section id="gallery-preview">
 	<?php if ( have_rows( 'gallery_section' ) ) : ?>
 	<?php while ( have_rows( 'gallery_section' ) ) : the_row(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center sub">
-            <small><?php the_sub_field( 'subtitle' ); ?></small>
-            <h2><?php the_sub_field( 'title' ); ?></h2>
-            </div>
-        </div>
-        <div class="row">
-
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-            <?php $button_link = get_sub_field( 'button_link' ); ?>
-            <?php if ( $button_link ) : ?>
-            <a href="<?php echo esc_url( $button_link) ; ?>" class="btn-ar"><?php the_sub_field( 'button_text' ); ?></a>
-            <?php endif; ?>
-            </div>
-        </div>
+				<small><?php the_sub_field( 'subtitle' ); ?></small>
+				<h2><?php the_sub_field( 'title' ); ?></h2>
+			</div>
+		</div>
+		<div class="row gallery justify-content-center">
+			<?php $gallery_images = get_field( 'gallery', 4342 ); $i = 0; ?>
+			<?php if ( $gallery_images ) :  ?>
+			<?php foreach ( $gallery_images as $gallery_image ): 
+			if ($i == 6): break; endif; ?>
+			<a href="<?php echo esc_url( $gallery_image['url'] ); ?>" class="col-6 col-md-4"
+				data-rel="lightcase:gallery" data-lc-caption="<?php echo $gallery_image['caption']; ?>">
+				<img src="<?php echo esc_url( $gallery_image['sizes']['medium'] ); ?>"
+					alt="<?php echo esc_attr( $gallery_image['alt'] ); ?>" />
+			</a>
+			<?php $i++; endforeach; ?>
+			<?php endif; ?>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<?php $button_link = get_sub_field( 'button_link' ); ?>
+				<?php if ( $button_link ) : ?>
+				<a href="<?php echo esc_url( $button_link) ; ?>"
+					class="btn-ar"><?php the_sub_field( 'button_text' ); ?></a>
+				<?php endif; ?>
+			</div>
+		</div>
 	</div>
 	<?php endwhile; ?>
 	<?php endif; ?>
