@@ -7,4 +7,36 @@
     justify-content: center;
     background-size:cover;
     color:#FFF;
+    .progress-wrapper{
+        position: relative;
+        margin-top:1rem;
+        .inner-text{
+            position: absolute;
+            right:10px;
+            top:0;
+            bottom:0;
+        }
+    }
+    .progress{
+        background-color:rgba(#FFF, 0.3);
+        backdrop-filter: blur(20px);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        .progress-bar{
+            background-color:#9BA43A;
+            position: relative;
+            height: 30px;
+        }
+        
+        .outer-text{
+            position: absolute;
+            right:0;
+            bottom:-30px;
+        }
+    }
+    
+}
+#faqs{
+    margin:5rem 0;
 }
